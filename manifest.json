@@ -1,0 +1,8 @@
+{
+  "name": "南迴春節之旅",
+  "short_name": "南迴旅行",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F7F3F0",
+  "theme_color": "#8C7851"
+}

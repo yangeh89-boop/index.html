@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>2026 南迴春節之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #F7F3F0; color: #4A4A4A; padding-bottom: 100px; -webkit-tap-highlight-color: transparent; }
+        h1, h2, .font-serif { font-family: 'Zen Old Mincho', serif; }
+        .muji-card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border: 1px solid #EAE0D5; overflow: hidden; margin-bottom: 1rem; }
+        .muji-btn { background-color: #8C7851; color: white; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .nav-active { color: #8C7851 !important; font-weight: 700; }
+        .timeline-dot { width: 10px; height: 10px; border-radius: 50%; position: absolute; left: -21px; top: 5px; z-index: 10; border: 2px solid white; }
+        .action-link { display: inline-flex; align-items: center; background: #fff; padding: 4px 8px; border-radius: 6px; font-size: 10px; color: #8C7851; margin-top: 6px; border: 1px solid #EAE0D5; margin-right: 5px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .food-link { color: #D97706; border-color: #FDE68A; background-color: #FFFBEB; }
+        .action-link i { margin-right: 4px; }
+        .highlight-time { color: #D97706; font-weight: 700; font-size: 10px; }
+    </style>
+</head>
+<body>
+
+    <header class="p-6 bg-white border-b border-stone-100 sticky top-0 z-50 text-center">
+        <h1 class="text-xl font-bold text-stone-800 tracking-widest">南迴春節之旅</h1>
+        <p class="text-[10px] text-stone-400 mt-1 uppercase tracking-widest">2/18 - 2/20 | 導航、景點、美食全導覽</p>
+    </header>
+
+    <main class="max-w-md mx-auto p-4">
+        <section id="plan" class="tab-content active">
+            <div class="flex space-x-2 mb-4 overflow-x-auto py-2 no-scrollbar">
+                <button onclick="showDay(1)" id="day1-btn" class="px-5 py-2 rounded-full muji-btn text-xs shrink-0 shadow-sm">Day 1 (初二)</button>
+                <button onclick="showDay(2)" id="day2-btn" class="px-5 py-2 rounded-full bg-white border border-stone-200 text-stone-500 text-xs shrink-0">Day 2 (初三)</button>
+                <button onclick="showDay(3)" id="day3-btn" class="px-5 py-2 rounded-full bg-white border border-stone-200 text-stone-500 text-xs shrink-0">Day 3 (初四)</button>
+            </div>
+
+            <div id="day1-content" class="day-view space-y-4">
+                <div class="muji-card p-5">
+                    <h3 class="font-bold text-stone-700 border-b pb-2 mb-4">🧧 2/18 森林漫步與泡湯</h3>
+                    <div class="border-l-2 border-stone-200 ml-4 pl-6 space-y-6 relative">
+                        <div class="relative"><div class="timeline-dot bg-red-500"></div><span class="highlight-time">07:30</span><p class="text-sm font-bold">高雄準時出發</p></div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">09:15</span><p class="text-sm">多良車站</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=多良車站" class="action-link"><i class="fa-solid fa-location-dot"></i>導航</a>
+                            <a href="https://tour.taitung.gov.tw/zh-tw/attractions/detail/260" class="action-link"><i class="fa-solid fa-circle-info"></i>景點資訊</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">10:15</span><p class="text-sm">太麻里福興宮 (招財貓土地公)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=太麻里福興宮" class="action-link"><i class="fa-solid fa-location-dot"></i>導航</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=太麻里美食" class="action-link food-link"><i class="fa-solid fa-utensils"></i>附近美食</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">11:00</span><p class="text-sm">櫻木花道平交道</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=太麻里櫻木花道平交道" class="action-link"><i class="fa-solid fa-camera"></i>導航拍照</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">11:45</span><p class="text-sm font-bold text-orange-800">知本午餐 (三姊妹米苔目)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=三姊妹米苔目" class="action-link"><i class="fa-solid fa-star"></i>評價</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">13:30</span><p class="text-sm font-bold">知本國家森林遊樂區</p>
+                            <a href="https://recreation.forest.gov.tw/Forest/RA?RA_ID=0600001" class="action-link"><i class="fa-solid fa-tree"></i>森林指南</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=知本森林遊樂區附近美食" class="action-link food-link"><i class="fa-solid fa-utensils"></i>周邊餐廳</a>
+                        </div>
+                        <div class="relative"><div class="timeline-dot bg-stone-800"></div><span class="highlight-time">16:00</span><p class="text-sm font-bold">亞灣飯店 Check-in</p></div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-blue-400"></div><span class="highlight-time">17:00</span><p class="text-sm font-bold text-blue-800">東遊季溫泉泡湯</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=東遊季溫泉度假村" class="action-link"><i class="fa-solid fa-hot-tub-person"></i>導航泡湯</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-orange-400"></div><span class="highlight-time">19:00</span><p class="text-sm font-bold text-orange-700">晚餐：黑松羊肉爐</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=黑松羊肉爐" class="action-link"><i class="fa-solid fa-utensils"></i>看食記</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day2-content" class="day-view hidden space-y-4">
+                <div class="muji-card p-5">
+                    <h3 class="font-bold text-stone-700 border-b pb-2 mb-4">🧧 2/19 琉璃體驗與池上漫遊</h3>
+                    <div class="border-l-2 border-stone-200 ml-4 pl-6 space-y-6 relative">
+                        <div class="relative"><div class="timeline-dot bg-red-500"></div><span class="highlight-time">08:15</span><p class="text-sm font-bold">辦理退房並出發</p></div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">09:00</span><p class="text-sm">卡塔文化工作室 (琉璃珠DIY)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=卡塔文化工作室" class="action-link"><i class="fa-solid fa-map"></i>導航</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">11:30</span><p class="text-sm font-bold">原生應用植物園 (午餐)</p>
+                            <a href="https://www.yuan-sen.com.tw/" class="action-link"><i class="fa-solid fa-leaf"></i>看藥草鍋菜單</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-800"></div><span class="highlight-time">15:00</span><p class="text-sm font-bold text-green-700">池上深度漫遊 (電動四人車)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上伯朗大道" class="action-link"><i class="fa-solid fa-location-dot"></i>導航</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上必吃美食" class="action-link food-link"><i class="fa-solid fa-bowl-rice"></i>池上食選</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day3-content" class="day-view hidden space-y-4">
+                <div class="muji-card p-5">
+                    <h3 class="font-bold text-stone-700 border-b pb-2 mb-4">🧧 2/20 山海建築與古蹟巡禮</h3>
+                    <div class="border-l-2 border-stone-200 ml-4 pl-6 space-y-6 relative">
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">09:15</span><p class="text-sm">臺東大學圖書館 (金字塔美拍)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=國立臺東大學圖書資訊館" class="action-link"><i class="fa-solid fa-camera"></i>導航</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">11:00</span><p class="text-sm font-bold">大武之心南迴驛</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=大武之心南迴驛" class="action-link"><i class="fa-solid fa-store"></i>伴手禮/休息</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">12:30</span><p class="text-sm font-bold text-orange-800">午餐：關子嶺茶壺雞 (加祿店)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=關子嶺茶壺雞加祿分店" class="action-link"><i class="fa-solid fa-utensils"></i>導航</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-stone-300"></div><span class="highlight-time">14:00</span><p class="text-sm">佳冬古蹟巡禮 (蕭家古厝)</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=佳冬蕭家古厝" class="action-link"><i class="fa-solid fa-landmark"></i>地圖導覽</a>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-dot bg-orange-500"></div><span class="highlight-time">16:00</span><p class="text-sm font-bold text-orange-700">最終站：水月軒鮮蝦料理</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=水月軒鮮蝦料理" class="action-link"><i class="fa-solid fa-star"></i>評價預約</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="tab-content">
+            <h2 class="text-lg font-bold mb-4 text-stone-800 text-center">住宿與緊急資訊</h2>
+            <div class="muji-card p-5">
+                <p class="text-sm font-bold text-stone-700 font-serif">🏠 知本亞灣飯店</p>
+                <p class="text-xs text-stone-500 mb-4">台東縣卑南鄉溫泉村鎮樂1號</p>
+                <div class="flex space-x-2">
+                    <a href="tel:089510007" class="flex-1 text-center py-3 bg-stone-100 rounded-lg text-sm font-bold text-stone-700"><i class="fa-solid fa-phone"></i> 撥打飯店</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=知本亞灣飯店" class="flex-1 text-center py-3 bg-stone-100 rounded-lg text-sm font-bold text-stone-700"><i class="fa-solid fa-location-arrow"></i> 導航</a>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-lg border border-orange-100 text-[10px] text-orange-700 leading-relaxed mt-4">
+                    💡 **春節叮嚀：** 2/18 初二南迴公路車潮多，多良與太麻里段容易塞車。水月軒、黑松羊肉爐等餐廳人潮極大，建議提早電話詢問位況！
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/95 border-t border-stone-200 flex justify-around items-center py-4 z-50">
+        <button onclick="switchTab('plan', this)" class="nav-btn flex flex-col items-center nav-active flex-1">
+            <i class="fa-solid fa-calendar-check text-xl"></i><span class="text-[10px] mt-1">行程導覽</span>
+        </button>
+        <button onclick="switchTab('info', this)" class="nav-btn flex flex-col items-center text-stone-400 flex-1">
+            <i class="fa-solid fa-circle-info text-xl"></i><span class="text-[10px] mt-1">住宿資訊</span>
+        </button>
+    </nav>
+
+    <script>
+        function switchTab(tabId, el) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('nav-active', 'text-stone-400'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.add('text-stone-400'));
+            el.classList.add('nav-active'); el.classList.remove('text-stone-400');
+            window.scrollTo(0,0);
+        }
+        function showDay(day) {
+            document.querySelectorAll('.day-view').forEach(v => v.classList.add('hidden'));
+            document.getElementById(`day${day}-content`).classList.remove('hidden');
+            for(let i=1; i<=3; i++) {
+                const btn = document.getElementById(`day${i}-btn`);
+                if(i===day) btn.className = "px-5 py-2 rounded-full muji-btn text-xs shrink-0 shadow-sm";
+                else btn.className = "px-5 py-2 rounded-full bg-white border border-stone-200 text-stone-500 text-xs shrink-0";
+            }
+        }
+    </script>
+</body>
+</html>
